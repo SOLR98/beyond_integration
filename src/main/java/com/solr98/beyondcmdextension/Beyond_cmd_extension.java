@@ -13,16 +13,16 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(Beyond_integration.MODID)
-public class Beyond_integration {
+@Mod(Beyond_cmd_extension.MODID)
+public class Beyond_cmd_extension {
 
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "beyond_integration";
+    public static final String MODID = "beyond_cmd_extension";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     @SuppressWarnings("removal")
-    public Beyond_integration() {
+    public Beyond_cmd_extension() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading

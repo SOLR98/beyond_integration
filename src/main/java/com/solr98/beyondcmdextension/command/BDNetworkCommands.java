@@ -30,7 +30,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.server.ServerLifecycleHooks;
-import com.solr98.beyondcmdextension.Beyond_integration;
+import com.solr98.beyondcmdextension.Beyond_cmd_extension;
 
 import java.math.BigInteger;
 import java.text.DecimalFormat;
@@ -40,7 +40,7 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Mod.EventBusSubscriber(modid = Beyond_integration.MODID)
+@Mod.EventBusSubscriber(modid = Beyond_cmd_extension.MODID)
 public final class BDNetworkCommands
 {
     private BDNetworkCommands()
