@@ -13,12 +13,12 @@ public class CommandLang
     static
     {
         register("network.list.title",
-                CommandConfig.Language.EN_US, "=== Dimension Networks ===",
-                CommandConfig.Language.ZH_CN, "=== 维度网络列表 ===");
+                CommandConfig.Language.EN_US, "====== Dimension Networks ",
+                CommandConfig.Language.ZH_CN, "========= 维度网络列表 ");
 
         register("network.list.all_title",
-                CommandConfig.Language.EN_US, "=== All Dimension Networks ===",
-                CommandConfig.Language.ZH_CN, "=== 所有维度网络 ===");
+                CommandConfig.Language.EN_US, "====== All Dimension Networks ",
+                CommandConfig.Language.ZH_CN, "========= 所有维度网络 ");
 
         register("network.list.owner",
                 CommandConfig.Language.EN_US, "Owner",
@@ -45,8 +45,8 @@ public class CommandLang
                 CommandConfig.Language.ZH_CN, "未找到网络。");
 
         register("network.info.title",
-                CommandConfig.Language.EN_US, "=== Network Info (ID: %s) ===",
-                CommandConfig.Language.ZH_CN, "=== 网络信息 (ID: %s) ===");
+                CommandConfig.Language.EN_US, "======= Network Info (ID: %s) =======",
+                CommandConfig.Language.ZH_CN, "======= 网络信息 (ID: %s) =======");
 
         register("network.info.unknown",
                 CommandConfig.Language.EN_US, "Unknown",
@@ -112,6 +112,14 @@ public class CommandLang
                 CommandConfig.Language.EN_US, "Given portable network terminal (bound to netId=%s, owner=%s) x%s",
                 CommandConfig.Language.ZH_CN, "已给予便携网络终端 (绑定到 netId=%s, 所有者=%s) x%s");
 
+        register("network.giveTerminal.item_name",
+                CommandConfig.Language.EN_US, "Owner: %s's Network #%s",
+                CommandConfig.Language.ZH_CN, "所有者: %s 的 %s号网络");
+
+        register("network.giveTerminal.item_description",
+                CommandConfig.Language.EN_US, "Owner: %s\nNetwork ID: %s",
+                CommandConfig.Language.ZH_CN, "所有者: %s\n网络ID: %s");
+
         register("network.giveTerminal.not_exist",
                 CommandConfig.Language.EN_US, "Network does not exist: netId=%s",
                 CommandConfig.Language.ZH_CN, "网络不存在：netId=%s");
@@ -145,6 +153,14 @@ public class CommandLang
         register("network.list.page_with_total",
                 CommandConfig.Language.EN_US, "Page %s/%s (Total: %s networks)",
                 CommandConfig.Language.ZH_CN, "第 %s/%s 页 (总计: %s 个网络)");
+
+        register("network.list.player_title",
+                CommandConfig.Language.EN_US, "======= %s's Networks ",
+                CommandConfig.Language.ZH_CN, "========== %s 的网络 ");
+
+        register("network.list.permission",
+                CommandConfig.Language.EN_US, "Permission",
+                CommandConfig.Language.ZH_CN, "权限");
 
         register("network.open.success",
                 CommandConfig.Language.EN_US, "Opened %s GUI for network %s for player %s",
@@ -194,6 +210,26 @@ public class CommandLang
                 CommandConfig.Language.EN_US, "Network Terminal",
                 CommandConfig.Language.ZH_CN, "网络终端");
 
+        register("network.open.menu.permission",
+                CommandConfig.Language.EN_US, "Network Permission Control",
+                CommandConfig.Language.ZH_CN, "网络权限控制");
+
+        register("network.open.error.no_permission_control",
+                CommandConfig.Language.EN_US, "Player %s does not have permission to control network %s (requires owner or manager)",
+                CommandConfig.Language.ZH_CN, "玩家 %s 没有权限控制网络 %s (需要所有者或管理员权限)");
+
+        register("network.open.error.no_primary_network",
+                CommandConfig.Language.EN_US, "Player %s does not have a primary network",
+                CommandConfig.Language.ZH_CN, "玩家 %s 没有主要网络");
+
+        register("network.open.error.cannot_get_network_id",
+                CommandConfig.Language.EN_US, "Cannot get network ID",
+                CommandConfig.Language.ZH_CN, "无法获取网络ID");
+
+        register("network.open.error.not_primary_network",
+                CommandConfig.Language.EN_US, "Network %s is not player %s's primary network (primary network is %s). Use /bdtools myNetworks to set primary network.",
+                CommandConfig.Language.ZH_CN, "网络 %s 不是玩家 %s 的主要网络（主要网络是 %s）。使用 /bdtools myNetworks 设置主要网络。");
+
         register("network.batchAdd.success",
                 CommandConfig.Language.EN_US, "Successfully added %s players as %s to network %s: %s",
                 CommandConfig.Language.ZH_CN, "成功添加 %s 个玩家为网络 %s 的%s: %s");
@@ -203,23 +239,23 @@ public class CommandLang
                 CommandConfig.Language.ZH_CN, "以下玩家已在网络中: %s");
 
         register("network.batchAddPlayer.success",
-                CommandConfig.Language.EN_US, "Successfully added player %s as %s to %s networks",
+                CommandConfig.Language.EN_US, "Successfully added player %s as %s to %s network(s)",
                 CommandConfig.Language.ZH_CN, "成功添加玩家 %s 为%s到 %s 个网络");
 
         register("network.batchAddPlayer.already_in_networks",
-                CommandConfig.Language.EN_US, "Player already in networks: %s",
+                CommandConfig.Language.EN_US, "Player already in network(s): %s",
                 CommandConfig.Language.ZH_CN, "玩家已在以下网络中: %s");
 
         register("network.batchAddPlayer.not_exist",
-                CommandConfig.Language.EN_US, "Networks do not exist: %s",
+                CommandConfig.Language.EN_US, "Network(s) do not exist: %s",
                 CommandConfig.Language.ZH_CN, "以下网络不存在: %s");
 
         register("network.batchAddPlayer.no_permission",
-                CommandConfig.Language.EN_US, "No permission to add player to networks: %s",
+                CommandConfig.Language.EN_US, "No permission to add player to network(s): %s",
                 CommandConfig.Language.ZH_CN, "无权限添加玩家到以下网络: %s");
 
         register("network.batchAddPlayer.failed",
-                CommandConfig.Language.EN_US, "Failed to add player to networks: %s",
+                CommandConfig.Language.EN_US, "Failed to add player to network(s): %s",
                 CommandConfig.Language.ZH_CN, "添加玩家到以下网络失败: %s");
 
         register("network.batchAddPlayer.error.invalid_networks",
@@ -230,6 +266,22 @@ public class CommandLang
                 CommandConfig.Language.EN_US, "No networks specified",
                 CommandConfig.Language.ZH_CN, "未指定网络");
 
+        register("network.batchAddToNetworks.success",
+                CommandConfig.Language.EN_US, "Successfully added %s players as %s to %s network(s)",
+                CommandConfig.Language.ZH_CN, "成功添加 %s 名玩家为%s到 %s 个网络");
+
+        register("network.batchAddToNetworks.already_in_network",
+                CommandConfig.Language.EN_US, "Players already in network(s):",
+                CommandConfig.Language.ZH_CN, "玩家已在以下网络中:");
+
+        register("network.batchAddToNetworks.no_permission",
+                CommandConfig.Language.EN_US, "No permission to add players to network(s):",
+                CommandConfig.Language.ZH_CN, "无权限添加玩家到以下网络:");
+
+        register("network.batchAddToNetworks.failed",
+                CommandConfig.Language.EN_US, "Failed to add players to network(s):",
+                CommandConfig.Language.ZH_CN, "添加玩家到以下网络失败:");
+
         register("network.batchAdd.failed",
                 CommandConfig.Language.EN_US, "Failed to add players: %s",
                 CommandConfig.Language.ZH_CN, "以下玩家添加失败: %s");
@@ -239,12 +291,12 @@ public class CommandLang
                 CommandConfig.Language.ZH_CN, "没有玩家被添加（玩家列表可能为空）");
 
         register("network.myNetworks.title.self",
-                CommandConfig.Language.EN_US, "=== Your Network Permissions ===",
-                CommandConfig.Language.ZH_CN, "=== 您拥有的网络权限 ===");
+                CommandConfig.Language.EN_US, " Your Network Permissions",
+                CommandConfig.Language.ZH_CN, " 您拥有的网络权限 ");
 
         register("network.myNetworks.title.other",
                 CommandConfig.Language.EN_US, "=== Network Permissions for Player %s ===",
-                CommandConfig.Language.ZH_CN, "=== 玩家 %s 拥有的网络权限 ===");
+                CommandConfig.Language.ZH_CN, "======= 玩家 %s 拥有的网络权限 =======");
 
         register("network.myNetworks.none",
                 CommandConfig.Language.EN_US, "This player has no network permissions",
@@ -307,6 +359,48 @@ public class CommandLang
         register("network.generateResources.success",
                 CommandConfig.Language.EN_US, "Generated %s resources of type %s, total %s inserted into network %s",
                 CommandConfig.Language.ZH_CN, "已生成 %s 个%s资源，共 %s 插入到网络 %s");
+
+        register("network.generateItems.resource_type.items",
+                CommandConfig.Language.EN_US, "item",
+                CommandConfig.Language.ZH_CN, "物品");
+
+        register("network.generateItems.resource_type.fluids",
+                CommandConfig.Language.EN_US, "fluid",
+                CommandConfig.Language.ZH_CN, "流体");
+
+        register("network.generateItems.resource_type.energy",
+                CommandConfig.Language.EN_US, "energy",
+                CommandConfig.Language.ZH_CN, "能量");
+
+        register("network.generateItems.resource_type.mixed",
+                CommandConfig.Language.EN_US, "mixed",
+                CommandConfig.Language.ZH_CN, "混合");
+
+        register("network.generateItems.resource_type.all",
+                CommandConfig.Language.EN_US, "all",
+                CommandConfig.Language.ZH_CN, "全部");
+
+        register("network.generateResources.detailed_title",
+                CommandConfig.Language.EN_US, "=== Generated %s Resources for Network %s ===",
+                CommandConfig.Language.ZH_CN, "=== 为网络 %s 生成的%s资源 ===");
+
+        register("network.generateResources.detailed_items",
+                CommandConfig.Language.EN_US, "  Items: %s types, %s total",
+                CommandConfig.Language.ZH_CN, "  物品: %s 种, %s 个");
+
+        register("network.generateResources.detailed_fluids",
+                CommandConfig.Language.EN_US, "  Fluids: %s types, %s mB total",
+                CommandConfig.Language.ZH_CN, "  流体: %s 种, %s mB");
+
+        register("network.generateResources.detailed_energy",
+                CommandConfig.Language.EN_US, "  Energy: %s types, %s FE total",
+                CommandConfig.Language.ZH_CN, "  能量: %s 种, %s FE");
+
+        register("network.generateResources.detailed_total",
+                CommandConfig.Language.EN_US, "  Total: %s resource types, %s resources inserted",
+                CommandConfig.Language.ZH_CN, "  总计: %s 种资源类型, %s 个资源已插入");
+
+
 
         register("network.myNetworks.info.format",
                 CommandConfig.Language.EN_US, "Network %s | Permission: %s | Owner: %s | Players: %s | Managers: %s",
@@ -375,6 +469,403 @@ public class CommandLang
         register("network.info.no_players",
                 CommandConfig.Language.EN_US, "No players",
                 CommandConfig.Language.ZH_CN, "无玩家");
+
+        // 自动合成命令相关文本
+        register("network.craft.success",
+                CommandConfig.Language.EN_US, "Successfully crafted %s x %s from network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %3$s 合成 %1$s x %2$s");
+        
+        register("network.craft.no_recipe",
+                CommandConfig.Language.EN_US, "No crafting recipe found for: %s",
+                CommandConfig.Language.ZH_CN, "找不到合成配方: %s");
+        
+        register("network.craft.insufficient_materials",
+                CommandConfig.Language.EN_US, "Insufficient materials in network",
+                CommandConfig.Language.ZH_CN, "网络材料不足");
+        
+        register("network.craft.insufficient_storage",
+                CommandConfig.Language.EN_US, "Insufficient storage space for output",
+                CommandConfig.Language.ZH_CN, "输出存储空间不足");
+        
+        register("network.craft.failed",
+                CommandConfig.Language.EN_US, "Crafting failed: %s",
+                CommandConfig.Language.ZH_CN, "合成失败: %s");
+        
+        register("network.craft.materials_required",
+                CommandConfig.Language.EN_US, "Materials required for %s x %s:",
+                CommandConfig.Language.ZH_CN, "合成 %1$s x %2$s 所需材料:");
+        
+        register("network.craft.material_entry",
+                CommandConfig.Language.EN_US, "  %s x %s",
+                CommandConfig.Language.ZH_CN, "  %2$s x %1$s");
+        
+        register("network.craft.material_available",
+                CommandConfig.Language.EN_US, " (Available: %s)",
+                CommandConfig.Language.ZH_CN, " (可用: %s)");
+        
+        register("network.craft.check.success",
+                CommandConfig.Language.EN_US, "Can craft %s x %s: materials available",
+                CommandConfig.Language.ZH_CN, "可以合成 %1$s x %2$s: 材料充足");
+        
+        register("network.craft.check.insufficient",
+                CommandConfig.Language.EN_US, "Cannot craft %s x %s: insufficient materials",
+                CommandConfig.Language.ZH_CN, "无法合成 %1$s x %2$s: 材料不足");
+        
+        // 合成树命令相关文本
+        register("network.craft.tree.success",
+                CommandConfig.Language.EN_US, "Crafting tree analysis for %s x %s:",
+                CommandConfig.Language.ZH_CN, "合成树分析 %1$s x %2$s:");
+        
+        register("network.craft.tree.node",
+                CommandConfig.Language.EN_US, "%s%s x %s - %s",
+                CommandConfig.Language.ZH_CN, "%1$s%3$s x %2$s - %4$s");
+        
+        register("network.craft.tree.indent",
+                CommandConfig.Language.EN_US, "  ",
+                CommandConfig.Language.ZH_CN, "  ");
+        
+        register("network.craft.tree.total_materials",
+                CommandConfig.Language.EN_US, "Total materials required:",
+                CommandConfig.Language.ZH_CN, "总计所需材料:");
+        
+        register("network.craft.tree.execute.success",
+                CommandConfig.Language.EN_US, "Successfully crafted tree for %s x %s from network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %3$s 执行合成树 %1$s x %2$s");
+        
+        register("network.craft.tree.execute.failed",
+                CommandConfig.Language.EN_US, "Crafting tree execution failed: %s",
+                CommandConfig.Language.ZH_CN, "合成树执行失败: %s");
+        
+        register("network.craft.tree.recursion_limit",
+                CommandConfig.Language.EN_US, "Recursion depth limit reached (%s levels)",
+                CommandConfig.Language.ZH_CN, "达到递归深度限制 (%s 层)");
+        
+        // 网络传输命令语言
+        register("network.transfer.request.sent",
+                CommandConfig.Language.EN_US, "Transfer request sent to %s. Waiting for confirmation...",
+                CommandConfig.Language.ZH_CN, "已向 %s 发送传输请求，等待确认...");
+        
+        register("network.transfer.request.received",
+                CommandConfig.Language.EN_US, "%s wants to transfer items from network %s to your network %s. Type /bdtools transfer accept to accept or /bdtools transfer deny to deny.",
+                CommandConfig.Language.ZH_CN, "%s 想要从网络 %s 传输物品到你的网络 %s。输入 /bdtools transfer accept 接受或 /bdtools transfer deny 拒绝。");
+        
+        register("network.transfer.accept.success",
+                CommandConfig.Language.EN_US, "Transfer request accepted. Starting transfer...",
+                CommandConfig.Language.ZH_CN, "传输请求已接受，开始传输...");
+        
+        register("network.transfer.deny.success",
+                CommandConfig.Language.EN_US, "Transfer request denied.",
+                CommandConfig.Language.ZH_CN, "传输请求已拒绝。");
+        
+        register("network.transfer.no_pending",
+                CommandConfig.Language.EN_US, "No pending transfer request.",
+                CommandConfig.Language.ZH_CN, "没有待处理的传输请求。");
+        
+        register("network.transfer.success",
+                CommandConfig.Language.EN_US, "Successfully transferred %s x %s from network %s to network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %s 传输 %s x %s 到网络 %s");
+        
+        register("network.transfer.failed",
+                CommandConfig.Language.EN_US, "Transfer failed: %s",
+                CommandConfig.Language.ZH_CN, "传输失败: %s");
+        
+        register("network.transfer.insufficient_items",
+                CommandConfig.Language.EN_US, "Insufficient items in source network: need %s x %s, only have %s",
+                CommandConfig.Language.ZH_CN, "源网络物品不足: 需要 %s x %s，只有 %s");
+        
+        register("network.transfer.insufficient_storage",
+                CommandConfig.Language.EN_US, "Insufficient storage space in target network",
+                CommandConfig.Language.ZH_CN, "目标网络存储空间不足");
+        
+        register("network.transfer.permission_denied",
+                CommandConfig.Language.EN_US, "You don't have permission to transfer from network %s",
+                CommandConfig.Language.ZH_CN, "你没有权限从网络 %s 传输物品");
+        
+        register("network.transfer.target_permission_denied",
+                CommandConfig.Language.EN_US, "You don't have permission to transfer to network %s",
+                CommandConfig.Language.ZH_CN, "你没有权限传输物品到网络 %s");
+        
+        register("network.transfer.invalid_network",
+                CommandConfig.Language.EN_US, "Invalid network ID: %s",
+                CommandConfig.Language.ZH_CN, "无效的网络ID: %s");
+        
+        register("network.transfer.same_network",
+                CommandConfig.Language.EN_US, "Source and target networks cannot be the same",
+                CommandConfig.Language.ZH_CN, "源网络和目标网络不能相同");
+        
+        register("network.transfer.timeout",
+                CommandConfig.Language.EN_US, "Transfer request timed out",
+                CommandConfig.Language.ZH_CN, "传输请求已超时");
+        
+        register("network.transfer.cancelled",
+                CommandConfig.Language.EN_US, "Transfer request cancelled",
+                CommandConfig.Language.ZH_CN, "传输请求已取消");
+        
+        register("network.transfer.command.usage",
+                CommandConfig.Language.EN_US, "Usage: /bdtools transfer <sourceNetId> <targetNetId> <item> [count]",
+                CommandConfig.Language.ZH_CN, "用法: /bdtools transfer <源网络ID> <目标网络ID> <物品> [数量]");
+        
+        // 流体传输相关翻译
+        register("network.transfer.fluid.request.received",
+                CommandConfig.Language.EN_US, "%s wants to transfer %s mB of %s from network %s to your network %s.",
+                CommandConfig.Language.ZH_CN, "%s 想要从网络 %s 传输 %s mB 的 %s 到你的网络 %s。");
+        
+        register("network.transfer.fluid.success",
+                CommandConfig.Language.EN_US, "Successfully transferred %s mB of %s from network %s to network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %s 传输 %s mB 的 %s 到网络 %s");
+        
+        // 能量传输相关翻译
+        register("network.transfer.energy.request.received",
+                CommandConfig.Language.EN_US, "%s wants to transfer %s FE of %s from network %s to your network %s.",
+                CommandConfig.Language.ZH_CN, "%s 想要从网络 %s 传输 %s FE 的 %s 到你的网络 %s。");
+        
+        register("network.transfer.energy.success",
+                CommandConfig.Language.EN_US, "Successfully transferred %s FE of %s from network %s to network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %s 传输 %s FE 的 %s 到网络 %s");
+        
+        // 物品传输相关翻译（保持向后兼容）
+        register("network.transfer.item.request.received",
+                CommandConfig.Language.EN_US, "%s wants to transfer %s x %s from network %s to your network %s.",
+                CommandConfig.Language.ZH_CN, "%s 想要从网络 %s 传输 %s x %s 到你的网络 %s。");
+        
+        register("network.transfer.item.success",
+                CommandConfig.Language.EN_US, "Successfully transferred %s x %s from network %s to network %s",
+                CommandConfig.Language.ZH_CN, "成功从网络 %s 传输 %s x %s 到网络 %s");
+        
+        // 扩展传输命令用法
+        register("network.transfer.command.usage.extended",
+                CommandConfig.Language.EN_US, "Usage: /bdtools transfer item|fluid|energy <sourceNetId> <targetNetId> <resource> [amount]",
+                CommandConfig.Language.ZH_CN, "用法: /bdtools transfer item|fluid|energy <源网络ID> <目标网络ID> <资源> [数量]");
+        
+        register("error.crafting_disabled",
+                CommandConfig.Language.EN_US, "Crafting functionality is disabled in configuration",
+                CommandConfig.Language.ZH_CN, "合成功能已在配置中禁用");
+        
+        // 传输相关错误消息
+        register("error.amount_must_be_positive",
+                CommandConfig.Language.EN_US, "Amount must be greater than 0",
+                CommandConfig.Language.ZH_CN, "数量必须大于0");
+        
+        register("error.target_owner_not_found",
+                CommandConfig.Language.EN_US, "Cannot find owner of target network",
+                CommandConfig.Language.ZH_CN, "无法找到目标网络的所有者");
+        
+        register("error.extract_energy_failed",
+                CommandConfig.Language.EN_US, "Failed to extract energy",
+                CommandConfig.Language.ZH_CN, "提取能量失败");
+        
+        register("error.extract_fluid_failed",
+                CommandConfig.Language.EN_US, "Failed to extract fluid",
+                CommandConfig.Language.ZH_CN, "提取流体失败");
+        
+        register("error.extract_item_failed",
+                CommandConfig.Language.EN_US, "Failed to extract item",
+                CommandConfig.Language.ZH_CN, "提取物品失败");
+        
+        register("error.accept_request_failed",
+                CommandConfig.Language.EN_US, "Failed to accept request",
+                CommandConfig.Language.ZH_CN, "接受请求失败");
+        
+        register("error.deny_request_failed",
+                CommandConfig.Language.EN_US, "Failed to deny request",
+                CommandConfig.Language.ZH_CN, "拒绝请求失败");
+        
+        register("error.no_pending_request",
+                CommandConfig.Language.EN_US, "No pending transfer request",
+                CommandConfig.Language.ZH_CN, "没有待处理的传输请求");
+        
+        register("error.request_cancelled",
+                CommandConfig.Language.EN_US, "Your transfer request has been cancelled",
+                CommandConfig.Language.ZH_CN, "你的传输请求已被取消");
+        
+        register("error.request_denied",
+                CommandConfig.Language.EN_US, "Your transfer request has been denied",
+                CommandConfig.Language.ZH_CN, "你的传输请求已被拒绝");
+        
+        register("error.transfer_failed_network",
+                CommandConfig.Language.EN_US, "Transfer failed: Network does not exist or has been deleted",
+                CommandConfig.Language.ZH_CN, "传输失败：网络不存在或已删除");
+        
+        // 传输请求消息
+        register("network.transfer.request.wants_to_transfer",
+                CommandConfig.Language.EN_US, " wants to transfer ",
+                CommandConfig.Language.ZH_CN, " 想要从网络 ");
+        
+        register("network.transfer.request.from_network",
+                CommandConfig.Language.EN_US, " from network ",
+                CommandConfig.Language.ZH_CN, " 传输 ");
+        
+        register("network.transfer.request.to_your_network",
+                CommandConfig.Language.EN_US, " to your network ",
+                CommandConfig.Language.ZH_CN, " 到你的网络 ");
+        
+        register("network.transfer.request.to_network",
+                CommandConfig.Language.EN_US, " to network ",
+                CommandConfig.Language.ZH_CN, " 到网络 ");
+        
+        register("network.transfer.success.from_network",
+                CommandConfig.Language.EN_US, "Successfully transferred from network ",
+                CommandConfig.Language.ZH_CN, "成功从网络 ");
+        
+        register("network.transfer.success.transferred",
+                CommandConfig.Language.EN_US, " transferred ",
+                CommandConfig.Language.ZH_CN, " 传输 ");
+        
+        // 按钮文本
+        register("button.accept",
+                CommandConfig.Language.EN_US, "[✓ Accept]",
+                CommandConfig.Language.ZH_CN, "[✓ 接受]");
+        
+        register("button.deny",
+                CommandConfig.Language.EN_US, "[✗ Deny]",
+                CommandConfig.Language.ZH_CN, "[✗ 拒绝]");
+        
+        register("button.cancel",
+                CommandConfig.Language.EN_US, "[🗙 Cancel]",
+                CommandConfig.Language.ZH_CN, "[🗙 取消]");
+        
+        register("button.hover.accept",
+                CommandConfig.Language.EN_US, "Click to accept transfer request",
+                CommandConfig.Language.ZH_CN, "点击接受传输请求");
+        
+        register("button.hover.deny",
+                CommandConfig.Language.EN_US, "Click to deny transfer request",
+                CommandConfig.Language.ZH_CN, "点击拒绝传输请求");
+        
+        register("button.hover.cancel",
+                CommandConfig.Language.EN_US, "Click to cancel transfer request",
+                CommandConfig.Language.ZH_CN, "点击取消传输请求");
+        
+        // 其他错误消息
+        register("error.network_id_required",
+                CommandConfig.Language.EN_US, "Network ID parameter cannot be empty",
+                CommandConfig.Language.ZH_CN, "网络ID参数不能为空");
+        
+        register("error.player_required_for_command",
+                CommandConfig.Language.EN_US, "This command must be executed by a player",
+                CommandConfig.Language.ZH_CN, "此命令必须由玩家执行");
+        
+        register("error.network_transfer_disabled",
+                CommandConfig.Language.EN_US, "Network transfer functionality is disabled. Please set enableNetworkTransfer=true in config file and restart server.",
+                CommandConfig.Language.ZH_CN, "网络间物品传输功能未启用。请在配置文件中设置 enableNetworkTransfer=true 并重启服务器。");
+        
+        register("error.network_transfer_disabled_simple",
+                CommandConfig.Language.EN_US, "Network transfer functionality is disabled.",
+                CommandConfig.Language.ZH_CN, "网络间物品传输功能未启用。");
+        
+        // 资源显示
+        register("display.fluid_total",
+                CommandConfig.Language.EN_US, "Fluid total: %s mB",
+                CommandConfig.Language.ZH_CN, "流体总量: %s mB");
+        
+        register("display.energy_total",
+                CommandConfig.Language.EN_US, "Energy total: %s FE",
+                CommandConfig.Language.ZH_CN, "能量总量: %s FE");
+        
+        register("display.crystal_generation_disabled",
+                CommandConfig.Language.EN_US, "Crystal generation is disabled",
+                CommandConfig.Language.ZH_CN, "结晶生成功能已禁用");
+        
+        register("display.disabled",
+                CommandConfig.Language.EN_US, "Disabled",
+                CommandConfig.Language.ZH_CN, "已禁用");
+        
+        // 功能未实现
+        register("error.enchantment_book_not_implemented",
+                CommandConfig.Language.EN_US, "Enchantment book giving functionality is not yet implemented",
+                CommandConfig.Language.ZH_CN, "给予附魔书功能暂未实现");
+        
+        // 资源生成结果
+        register("network.generate.result.title",
+                CommandConfig.Language.EN_US, "Network %s resource generation result (%s):",
+                CommandConfig.Language.ZH_CN, "网络 %s 资源生成结果 (%s):");
+        
+        register("network.generate.result.items",
+                CommandConfig.Language.EN_US, "  Items: %s types, %s total",
+                CommandConfig.Language.ZH_CN, "  物品: %s 种, 总量: %s");
+        
+        register("network.generate.result.fluids",
+                CommandConfig.Language.EN_US, "  Fluids: %s types, %s mB total",
+                CommandConfig.Language.ZH_CN, "  流体: %s 种, 总量: %s mB");
+        
+        register("network.generate.result.energy",
+                CommandConfig.Language.EN_US, "  Energy: %s types, %s FE total",
+                CommandConfig.Language.ZH_CN, "  能量: %s 种, 总量: %s FE");
+        
+        // 分页导航
+        register("pagination.click_to_page",
+                CommandConfig.Language.EN_US, "Click to go to page %s",
+                CommandConfig.Language.ZH_CN, "点击前往第 %s 页");
+        
+        // 物品和资源类型显示
+        register("display.total_items",
+                CommandConfig.Language.EN_US, "Total items: %s",
+                CommandConfig.Language.ZH_CN, "物品总数: %s");
+        
+        register("display.resource_type_count",
+                CommandConfig.Language.EN_US, "%s type count: %s",
+                CommandConfig.Language.ZH_CN, "%s类型数量: %s");
+        
+        // 结晶时间显示
+        register("display.crystal_remaining_time",
+                CommandConfig.Language.EN_US, "Crystal Remaining Time: %s",
+                CommandConfig.Language.ZH_CN, "结晶剩余时间: %s");
+        
+        register("display.crystal_time_tooltip",
+                CommandConfig.Language.EN_US, "Time until next crystal generation",
+                CommandConfig.Language.ZH_CN, "距离下一次结晶生成的时间");
+        
+        // 槽位信息
+        register("display.slot_capacity",
+                CommandConfig.Language.EN_US, "Slot Capacity: %s",
+                CommandConfig.Language.ZH_CN, "槽位容量: %s");
+        
+        register("display.slot_count",
+                CommandConfig.Language.EN_US, "Slot Count: %s",
+                CommandConfig.Language.ZH_CN, "槽位数量: %s");
+        
+        // 时间格式化
+        register("time.format.days_hours_minutes_seconds",
+                CommandConfig.Language.EN_US, "%sd %sh %sm %ss",
+                CommandConfig.Language.ZH_CN, "%s天%s小时%s分钟%s秒");
+        
+        register("time.format.hours_minutes_seconds",
+                CommandConfig.Language.EN_US, "%sh %sm %ss",
+                CommandConfig.Language.ZH_CN, "%s小时%s分钟%s秒");
+        
+        register("time.format.minutes_seconds",
+                CommandConfig.Language.EN_US, "%sm %ss",
+                CommandConfig.Language.ZH_CN, "%s分钟%s秒");
+        
+        register("time.format.seconds",
+                CommandConfig.Language.EN_US, "%ss",
+                CommandConfig.Language.ZH_CN, "%s秒");
+        
+        register("time.format.less_than_second",
+                CommandConfig.Language.EN_US, "<1s",
+                CommandConfig.Language.ZH_CN, "<1秒");
+        
+        // 插入操作成功消息
+        register("network.insert.fluid.success",
+                CommandConfig.Language.EN_US, "Inserted %s mB of %s into network %s",
+                CommandConfig.Language.ZH_CN, "已向网络 %3$s 插入 %1$s mB 的 %2$s");
+        
+        register("network.insert.energy.success",
+                CommandConfig.Language.EN_US, "Inserted %s FE of energy into network %s",
+                CommandConfig.Language.ZH_CN, "已向网络 %2$s 插入 %1$s FE 能量");
+        
+        // 网络创建消息
+        register("network.create.success",
+                CommandConfig.Language.EN_US, "Created network #%s (ID: %s) for player %s",
+                CommandConfig.Language.ZH_CN, "为玩家 %3$s 创建网络 #%1$s (ID: %2$s)");
+        
+        register("network.create.warning.failed",
+                CommandConfig.Language.EN_US, "Warning: Failed to create network #%s for player %s",
+                CommandConfig.Language.ZH_CN, "警告: 无法为玩家 %2$s 创建网络 #%1$s");
+        
+        register("network.create.warning.failed_with_error",
+                CommandConfig.Language.EN_US, "Warning: Failed to create network #%s for player %s: %s",
+                CommandConfig.Language.ZH_CN, "警告: 无法为玩家 %2$s 创建网络 #%1$s: %3$s");
     }
 
     private static void register(String key, CommandConfig.Language lang1, String text1, CommandConfig.Language lang2, String text2)

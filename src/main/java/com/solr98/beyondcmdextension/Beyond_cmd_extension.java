@@ -45,6 +45,15 @@ public class Beyond_cmd_extension {
         if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}");
 
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
+        
+        // Register enchantment book separator handler
+        registerEnchantmentBookSeparator();
+    }
+    
+    private void registerEnchantmentBookSeparator() {
+        com.wintercogs.beyonddimensions.api.dimensionnet.helper.UnifiedStorageBeforeInsertHandler
+                .addHandler(new com.solr98.beyondcmdextension.handler.EnchantmentBookSeparatorHandler());
+        LOGGER.info("Registered EnchantmentBookSeparatorHandler");
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
