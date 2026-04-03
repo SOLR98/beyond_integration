@@ -222,6 +222,15 @@ public class NetworkToolsCommand {
             return 0;
         }
         
+        // 检查"all"模式下的附魔数量
+        if (enchantType.equals("all")) {
+            int totalEnchantments = allEnchantments.size();
+            source.sendSuccess(() -> Component.literal(
+                CommandLang.get("network.tools.giveEnchantedBooks.all_info", 
+                    targetPlayer.getGameProfile().getName(), totalEnchantments)
+            ).withStyle(ChatFormatting.YELLOW), false);
+        }
+        
         int givenCount = 0;
         
         for (int i = 0; i < count; i++) {
@@ -230,19 +239,15 @@ public class NetworkToolsCommand {
             ListTag enchantmentsList = new ListTag();
             
             int enchantmentCount;
+            List<Enchantment> enchantmentsToAdd;
+            
             if (enchantType.equals("all")) {
-                // 给予所有附魔（每本1个）
-                enchantmentCount = 1;
+                // 给予所有附魔到一本书
+                enchantmentCount = allEnchantments.size();
+                enchantmentsToAdd = new ArrayList<>(allEnchantments);
             } else {
                 // 随机数量
                 enchantmentCount = minEnchants + random.nextInt(maxEnchants - minEnchants + 1);
-            }
-            
-            List<Enchantment> enchantmentsToAdd;
-            if (enchantType.equals("all")) {
-                // 循环给予所有附魔
-                enchantmentsToAdd = Collections.singletonList(allEnchantments.get(i % allEnchantments.size()));
-            } else {
                 // 随机选择附魔
                 enchantmentsToAdd = new ArrayList<>();
                 Collections.shuffle(allEnchantments, random);
@@ -252,7 +257,9 @@ public class NetworkToolsCommand {
             }
             
             for (Enchantment enchantment : enchantmentsToAdd) {
-                int level = 1 + random.nextInt(enchantment.getMaxLevel());
+                // 强制添加所有附魔，忽略冲突和限制
+                int maxLevel = enchantment.getMaxLevel();
+                int level = maxLevel > 0 ? maxLevel : 1; // 使用最大等级
                 
                 CompoundTag enchantmentTag = new CompoundTag();
                 enchantmentTag.putString("id", BuiltInRegistries.ENCHANTMENT.getKey(enchantment).toString());

@@ -889,6 +889,10 @@ public class CommandLang
                 CommandConfig.Language.EN_US, "Gave %s %s enchanted books",
                 CommandConfig.Language.ZH_CN, "已给予 %s %s 本附魔书");
         
+        register("network.tools.giveEnchantedBooks.all_info",
+                CommandConfig.Language.EN_US, "Creating enchanted book with all %s enchantments for %s...",
+                CommandConfig.Language.ZH_CN, "正在为 %s 创建包含所有 %s 个附魔的附魔书...");
+        
         // 插入命令错误
         register("error.item_required",
                 CommandConfig.Language.EN_US, "Item argument is required",
