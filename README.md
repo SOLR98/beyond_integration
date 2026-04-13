@@ -252,7 +252,7 @@ src/main/java/com/solr98/beyondcmdextension/
 
 ## 📄 许可证
 
-本项目采用 **MIT许可证** - 查看 [LICENSE](LICENSE) 文件了解详情。
+本项目采用 **MIT许可证**
 
 ## 📞 支持与联系
 
@@ -263,5 +263,3 @@ src/main/java/com/solr98/beyondcmdextension/
 ---
 
 **注意**: 本模组需要 Beyond Dimensions 模组才能正常工作。请确保已安装正确版本的依赖模组。
-
-**Happy Mining!** ⛏️
