@@ -1,0 +1,33 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.solr98.beyondintegration.mixin",
+  "plugin": "com.solr98.beyondintegration.mixin.MixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "GunDataMixin",
+    "AmmoConsumerMixin",
+    "BDBaseMenuMixin",
+    "DimensionsNetMenuMixin",
+    "DimensionsNetMixin",
+    "SavedDataAmmoSyncMixin",
+    "VehicleNetMixin",
+    "VehicleEnergyChargeMixin",
+    "NetInterfaceExtractMixin",
+    "NetFurnaceSpeedMixin",
+    "AbstractGunItemMixin",
+    "ModernKineticGunScriptAPIMixin",
+    "NetTerminalItemMixin"
+  ],
+  "client": [
+    "AmmoBarOverlayMixin",
+    "DimensionsNetGUIMixin",
+    "VehicleHudNetworkMixin",
+    "GunHudOverlayMixin",
+    "GunAnimationStateContextMixin",
+    "GunSmithTableScreenMixin",
+    "LocalPlayerShootMixin"
+  ],
+  "injectors": { "defaultRequire": 0 },
+  "overwrites": { "requireAnnotations": true }
+}
